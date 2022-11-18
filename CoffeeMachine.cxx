@@ -28,12 +28,12 @@ Check returner(Check struct_obj) {
 	CoffeeMachine obj2;
 	for(int i=0; i<5; i++) {
 		if(obj2.product[i] == struct_obj.product_name){
-			if(struct_obj.product_price > obj2.price[i]) {
+			if(struct_obj.product_price >= obj2.price[i]) {
 				std::cout << "Product exists" << std::endl;
 				obj.product_price = struct_obj.product_price - obj2.price[i];
 				std::cout << "Your dime is: " << obj.product_price << std::endl;
 				std::cout << "Be sweet" << std::endl;
-			}else if(struct_obj.product_price < obj2.price[i]){
+			}else if(struct_obj.product_price <= obj2.price[i]){
             	std::cout << "You don't have that much money" << std::endl;
 			}		 
 	}
